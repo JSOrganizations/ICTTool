@@ -1,7 +1,7 @@
 {
   "latest_version_code": 3,
   "latest_version_name": "1.2",
-  "is_force_update": true,
+  "is_force_update": false,
   "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.icttool",
   "whats_new": {
     "bn": [
