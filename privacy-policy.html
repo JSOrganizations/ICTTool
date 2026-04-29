@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — ICT Tool</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --ink: #0d1117;
@@ -32,6 +33,9 @@
             line-height: 1.75;
             -webkit-font-smoothing: antialiased;
         }
+        body.lang-bn .lang-en { display: none !important; }
+        body.lang-en .lang-bn { display: none !important; }
+
         .hero {
             background: var(--ink);
             position: relative;
@@ -59,6 +63,17 @@
             content:''; width:7px; height:7px; border-radius:50%;
             background:var(--accent-2); box-shadow:0 0 8px var(--accent-2); flex-shrink:0;
         }
+        button.hero-badge {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #fff;
+            background: rgba(26,107,255,.2);
+            border-color: rgba(26,107,255,.4);
+        }
+        button.hero-badge:hover {
+            background: rgba(26,107,255,.3);
+            transform: translateY(-2px);
+        }
         .hero h1 {
             font-family:'Playfair Display',Georgia,serif;
             font-size:clamp(2rem,7vw,4rem); font-weight:700; color:#fff;
@@ -74,7 +89,7 @@
             gap:clamp(10px,3vw,22px); position:relative; margin-top:26px;
         }
         .hero-meta-item {
-            display:flex; align-items:center; gap:6px;
+            display:flex; align-items:center; gap:8px;
             font-size:clamp(11px,2.5vw,13px); color:rgba(255,255,255,.45);
         }
         .page-wrap {
@@ -172,10 +187,10 @@
             margin:16px 0; display:flex; gap:12px;
             align-items:flex-start; font-size:clamp(13px,3vw,14.5px);
         }
-        .callout-icon { flex-shrink:0; width:19px; height:19px; margin-top:2px; }
+        .callout i { flex-shrink:0; font-size: 18px; margin-top:2px; }
         .callout.info  { background:var(--accent-glow); border:1px solid rgba(26,107,255,.18); color:#1a4db5; }
         .callout.safe  { background:rgba(0,201,167,.08); border:1px solid rgba(0,201,167,.22); color:#047d67; }
-        .callout.warning { background:var(--warn-bg); border:1px solid rgba(245,158,11,.25); color:#92640a; }
+        .callout.warning { background:var(--warn-bg); border:1px solid rgba(245,158,11,.4); color:#92640a; }
         .callout strong {
             display:block; font-weight:700; margin-bottom:3px;
             font-size:11px; text-transform:uppercase; letter-spacing:.06em;
@@ -188,7 +203,7 @@
             font-size:clamp(11px,2.5vw,13px); font-weight:500; color:var(--ink-light);
         }
         .pill.blocked { background:#fff1f1; border-color:#fecaca; color:#b91c1c; }
-        .pill.blocked::before { content:'✕'; font-size:9px; font-weight:900; }
+        .pill.blocked::before { content:'\f00d'; font-family:"Font Awesome 6 Free"; font-weight:900; font-size:9px; }
         .contact-card {
             background:linear-gradient(135deg,#0d1117 0%,#1a2033 100%);
             border-radius:var(--radius);
@@ -224,7 +239,7 @@
             text-transform:uppercase; color:rgba(255,255,255,.36);
             margin-bottom:6px; display:flex; align-items:center; gap:6px;
         }
-        .contact-label svg { opacity:.55; flex-shrink:0; }
+        .contact-label i { opacity:.55; flex-shrink:0; font-size: 12px; }
         .contact-value {
             font-size:clamp(12px,2.8vw,14px); font-weight:500;
             color:rgba(255,255,255,.82); word-break:break-word;
@@ -240,6 +255,7 @@
             max-width:880px; margin:0 auto;
         }
         .footer strong { color:var(--ink-light); }
+        
         @keyframes fadeUp {
             from { opacity:0; transform:translateY(16px); }
             to   { opacity:1; transform:translateY(0); }
@@ -254,92 +270,146 @@
         .section-card:nth-child(8)  { animation-delay:.32s; }
         .section-card:nth-child(9)  { animation-delay:.36s; }
         .section-card:nth-child(10) { animation-delay:.40s; }
+        .contact-card { animation-delay:.44s; }
+        
         @media (max-width:480px) {
             .toc-link { padding:11px 12px; }
             .contact-item { padding:13px 14px; }
         }
     </style>
 </head>
-<body>
+<body class="lang-en">
 
 <div class="hero">
-    <div class="hero-badge">ICT Tool · Android Application</div>
-    <h1>Privacy <span>Policy</span></h1>
-    <p class="hero-sub">ICT Tool — Educational App by JS Organization</p>
+    <div class="hero-badge">ICT Tool &middot; Android Application</div>
+    
+    <h1 class="lang-en">Privacy <span>Policy</span></h1>
+    <h1 class="lang-bn">গোপনীয়তা <span>নীতি</span></h1>
+
+    <p class="hero-sub lang-en">ICT Tool — Educational App by JS Organization</p>
+    <p class="hero-sub lang-bn">ICT Tool — JS Organization এর একটি শিক্ষামূলক অ্যাপ</p>
+    
+    <div class="hero-meta">
+        <button class="hero-badge lang-btn" onclick="toggleLanguage()">
+            <span class="lang-en"><i class="fa-solid fa-language"></i> Read in Bangla (বাংলা)</span>
+            <span class="lang-bn"><i class="fa-solid fa-language"></i> Read in English</span>
+        </button>
+    </div>
+
     <div class="hero-meta">
         <div class="hero-meta-item">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            Effective: April 21, 2026
+            <i class="fa-regular fa-calendar-alt"></i>
+            <span class="lang-en">Effective: April 29, 2026</span>
+            <span class="lang-bn">কার্যকরী তারিখ: ২৯ এপ্রিল, ২০২৬</span>
         </div>
         <div class="hero-meta-item">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Local device data only
+            <i class="fa-solid fa-mobile-alt"></i>
+            <span class="lang-en">Local device data only</span>
+            <span class="lang-bn">শুধুমাত্র লোকাল ডিভাইস ডেটা</span>
         </div>
         <div class="hero-meta-item">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Last updated: 2026
+            <i class="fa-regular fa-clock"></i>
+            <span class="lang-en">Last updated: 2026</span>
+            <span class="lang-bn">সর্বশেষ আপডেট: ২০২৬</span>
         </div>
     </div>
 </div>
 
 <div class="page-wrap">
+    
     <div class="toc-card">
-        <h2>Table of Contents</h2>
-        <div class="toc-grid">
-            <a href="#s1"  class="toc-link"><span class="toc-num">01</span> Information We Collect</a>
-            <a href="#s2"  class="toc-link"><span class="toc-num">02</span> Data We Do Not Collect</a>
-            <a href="#s3"  class="toc-link"><span class="toc-num">03</span> Local Storage Usage</a>
-            <a href="#s4"  class="toc-link"><span class="toc-num">04</span> Permissions Explained</a>
-            <a href="#s5"  class="toc-link"><span class="toc-num">05</span> Third-Party Services</a>
-            <a href="#s6"  class="toc-link"><span class="toc-num">06</span> Children's Privacy</a>
-            <a href="#s7"  class="toc-link"><span class="toc-num">07</span> Data Security</a>
-            <a href="#s8"  class="toc-link"><span class="toc-num">08</span> Internet Usage</a>
-            <a href="#s9"  class="toc-link"><span class="toc-num">09</span> Data Deletion</a>
+        <h2 class="lang-en">Table of Contents</h2>
+        <h2 class="lang-bn">সূচিপত্র</h2>
+        <div class="toc-grid lang-en">
+            <a href="#s1" class="toc-link"><span class="toc-num">01</span> Information We Collect</a>
+            <a href="#s2" class="toc-link"><span class="toc-num">02</span> Data We Do Not Collect</a>
+            <a href="#s3" class="toc-link"><span class="toc-num">03</span> Local Storage Usage</a>
+            <a href="#s4" class="toc-link"><span class="toc-num">04</span> Permissions Explained</a>
+            <a href="#s5" class="toc-link"><span class="toc-num">05</span> Third-Party Services</a>
+            <a href="#s6" class="toc-link"><span class="toc-num">06</span> Children's Privacy</a>
+            <a href="#s7" class="toc-link"><span class="toc-num">07</span> Data Security</a>
+            <a href="#s8" class="toc-link"><span class="toc-num">08</span> Internet Usage</a>
+            <a href="#s9" class="toc-link"><span class="toc-num">09</span> Data Deletion</a>
             <a href="#s10" class="toc-link"><span class="toc-num">10</span> Policy Changes</a>
             <a href="#s11" class="toc-link"><span class="toc-num">11</span> Contact Us</a>
+        </div>
+        <div class="toc-grid lang-bn">
+            <a href="#s1" class="toc-link"><span class="toc-num">০১</span> সংগ্রহ করা তথ্য</a>
+            <a href="#s2" class="toc-link"><span class="toc-num">০২</span> যেসব তথ্য সংগ্রহ করি না</a>
+            <a href="#s3" class="toc-link"><span class="toc-num">০৩</span> লোকাল স্টোরেজ ব্যবহার</a>
+            <a href="#s4" class="toc-link"><span class="toc-num">০৪</span> পারমিশনের ব্যাখ্যা</a>
+            <a href="#s5" class="toc-link"><span class="toc-num">০৫</span> তৃতীয় পক্ষের পরিষেবা</a>
+            <a href="#s6" class="toc-link"><span class="toc-num">০৬</span> শিশুদের গোপনীয়তা</a>
+            <a href="#s7" class="toc-link"><span class="toc-num">০৭</span> ডেটা নিরাপত্তা</a>
+            <a href="#s8" class="toc-link"><span class="toc-num">০৮</span> ইন্টারনেট ব্যবহার</a>
+            <a href="#s9" class="toc-link"><span class="toc-num">০৯</span> ডেটা মুছে ফেলা</a>
+            <a href="#s10" class="toc-link"><span class="toc-num">১০</span> নীতির পরিবর্তন</a>
+            <a href="#s11" class="toc-link"><span class="toc-num">১১</span> যোগাযোগ</a>
         </div>
     </div>
 
     <div class="section-card" id="s1">
         <div class="section-header">
-            <div class="section-num">01</div>
+            <div class="section-num lang-en">01</div>
+            <div class="section-num lang-bn">০১</div>
             <div>
-                <div class="section-title">Information We Collect</div>
-                <div class="section-subtitle">What data is stored and where it lives</div>
+                <div class="section-title lang-en">Information We Collect</div>
+                <div class="section-title lang-bn">সংগ্রহ করা তথ্য</div>
+                <div class="section-subtitle lang-en">What data is stored and where it lives</div>
+                <div class="section-subtitle lang-bn">কী ডেটা সংরক্ষিত হয় এবং কোথায় থাকে</div>
             </div>
         </div>
         <div class="section-body">
             <div class="callout safe">
-                <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <div><strong>Privacy-Oriented Design</strong>ICT Tool does not require account signup and does not collect personal identity data in-app.</div>
+                <i class="fa-solid fa-shield-halved"></i>
+                <div class="lang-en"><strong>Privacy-Oriented Design</strong>ICT Tool does not require account signup and does not collect personal identity data in-app.</div>
+                <div class="lang-bn"><strong>গোপনীয়তা-ভিত্তিক ডিজাইন</strong>ICT Tool-এ অ্যাকাউন্ট খোলার প্রয়োজন নেই এবং এটি অ্যাপের ভেতরে ব্যক্তিগত পরিচয়ের ডেটা সংগ্রহ করে না।</div>
             </div>
-            <h3>Local Device Storage</h3>
-            <p>The following data may be stored on your device for core app functionality:</p>
-            <ul class="policy-list">
+            
+            <h3 class="lang-en">Local Device Storage</h3>
+            <h3 class="lang-bn">লোকাল ডিভাইস স্টোরেজ</h3>
+            <p class="lang-en">The following data may be stored on your device for core app functionality:</p>
+            <p class="lang-bn">অ্যাপের মূল কার্যকারিতার জন্য নিচের ডেটাগুলো আপনার ডিভাইসে সংরক্ষিত হতে পারে:</p>
+            
+            <ul class="policy-list lang-en">
                 <li><strong>App Preferences</strong> — Theme, language, time format, and feature settings.</li>
                 <li><strong>Calculation History</strong> — Previous conversion and arithmetic results.</li>
                 <li><strong>HTML Runner History</strong> — HTML snippets entered and saved by you.</li>
                 <li><strong>Study Notes</strong> — Notes you create in the Notes section.</li>
                 <li><strong>Reading Progress</strong> — Local state related to textbook viewing.</li>
             </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>অ্যাপের পছন্দসমূহ</strong> — থিম, ভাষা, সময় বিন্যাস এবং বিভিন্ন সেটিংস।</li>
+                <li><strong>হিসাবের ইতিহাস</strong> — আগের রূপান্তর এবং গাণিতিক ফলাফল।</li>
+                <li><strong>HTML রানার হিস্ট্রি</strong> — আপনার লেখা এবং সেভ করা HTML কোড।</li>
+                <li><strong>স্টাডি নোটস</strong> — নোটস সেকশনে তৈরি করা আপনার নিজস্ব নোট।</li>
+                <li><strong>পড়ার অগ্রগতি</strong> — পাঠ্যপুস্তক দেখার লোকাল অবস্থা।</li>
+            </ul>
+
             <div class="callout info">
-                <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                <div><strong>Storage Scope</strong>This data is stored on your device and can be deleted by clearing app data or uninstalling the app.</div>
+                <i class="fa-solid fa-circle-info"></i>
+                <div class="lang-en"><strong>Storage Scope</strong>This data is stored on your device and can be deleted by clearing app data or uninstalling the app.</div>
+                <div class="lang-bn"><strong>স্টোরেজের পরিধি</strong>এই ডেটা আপনার ডিভাইসেই থাকে এবং অ্যাপ ডেটা ক্লিয়ার বা আনইনস্টল করে সহজেই মুছে ফেলা যায়।</div>
             </div>
         </div>
     </div>
 
     <div class="section-card" id="s2">
         <div class="section-header">
-            <div class="section-num">02</div>
+            <div class="section-num lang-en">02</div>
+            <div class="section-num lang-bn">০২</div>
             <div>
-                <div class="section-title">Information We Do Not Collect</div>
-                <div class="section-subtitle">A clear list of data we do not request</div>
+                <div class="section-title lang-en">Information We Do Not Collect</div>
+                <div class="section-title lang-bn">যেসব তথ্য আমরা সংগ্রহ করি না</div>
+                <div class="section-subtitle lang-en">A clear list of data we do not request</div>
+                <div class="section-subtitle lang-bn">আমরা যেসব ডেটা চাই না তার তালিকা</div>
             </div>
         </div>
         <div class="section-body">
-            <p>Based on the current app configuration, ICT Tool does not request or integrate:</p>
-            <div class="pill-grid">
+            <p class="lang-en">Based on the current app configuration, ICT Tool does not request or integrate:</p>
+            <p class="lang-bn">বর্তমান কনফিগারেশন অনুযায়ী, ICT Tool নিচের বিষয়গুলো চায় না বা ব্যবহার করে না:</p>
+            
+            <div class="pill-grid lang-en">
                 <span class="pill blocked">Camera Access</span>
                 <span class="pill blocked">Microphone Access</span>
                 <span class="pill blocked">Location Access</span>
@@ -349,165 +419,254 @@
                 <span class="pill blocked">Firebase Analytics</span>
                 <span class="pill blocked">In-App Login/Signup</span>
             </div>
-            <p>This app does not request sensitive device permissions.</p>
+            <div class="pill-grid lang-bn">
+                <span class="pill blocked">ক্যামেরা অ্যাক্সেস</span>
+                <span class="pill blocked">মাইক্রোফোন অ্যাক্সেস</span>
+                <span class="pill blocked">লোকেশন অ্যাক্সেস</span>
+                <span class="pill blocked">কন্টাক্টস / এসএমএস</span>
+                <span class="pill blocked">অ্যাডস (Ads) SDK</span>
+                <span class="pill blocked">অ্যানালিটিক্স SDK</span>
+                <span class="pill blocked">ফায়ারবেস অ্যানালিটিক্স</span>
+                <span class="pill blocked">ইন-অ্যাপ লগইন/সাইনআপ</span>
+            </div>
+            
+            <p class="lang-en">This app does not request sensitive device permissions.</p>
+            <p class="lang-bn">এই অ্যাপটি ডিভাইসের কোনো সংবেদনশীল পারমিশন চায় না।</p>
         </div>
     </div>
 
     <div class="section-card" id="s3">
         <div class="section-header">
-            <div class="section-num">03</div>
+            <div class="section-num lang-en">03</div>
+            <div class="section-num lang-bn">০৩</div>
             <div>
-                <div class="section-title">Local Storage Usage</div>
-                <div class="section-subtitle">How your device stores app data</div>
+                <div class="section-title lang-en">Local Storage Usage</div>
+                <div class="section-title lang-bn">লোকাল স্টোরেজ ব্যবহার</div>
+                <div class="section-subtitle lang-en">How your device stores app data</div>
+                <div class="section-subtitle lang-bn">আপনার ডিভাইস কীভাবে অ্যাপ ডেটা সংরক্ষণ করে</div>
             </div>
         </div>
         <div class="section-body">
-            <p>Data is stored in app-local storage (including SharedPreferences). Some local preferences are protected using encrypted storage where supported.</p>
-            <ul class="policy-list">
+            <p class="lang-en">Data is stored in app-local storage (including SharedPreferences). Some local preferences are protected using encrypted storage where supported.</p>
+            <p class="lang-bn">ডেটা অ্যাপের লোকাল স্টোরেজে সেভ করা হয়। কিছু লোকাল প্রেফারেন্স এনক্রিপ্টেড স্টোরেজ দিয়ে সুরক্ষিত থাকে।</p>
+            
+            <ul class="policy-list lang-en">
                 <li>Settings and preferences are saved in app-scoped storage.</li>
                 <li>User-created notes/history remain on your device.</li>
                 <li>No dedicated developer-operated cloud database is used for this data.</li>
             </ul>
+            <ul class="policy-list lang-bn">
+                <li>সেটিংস এবং প্রেফারেন্স অ্যাপ-স্কোপড স্টোরেজে সেভ হয়।</li>
+                <li>ব্যবহারকারীর তৈরি নোট/হিস্ট্রি আপনার ডিভাইসেই থাকে।</li>
+                <li>এই ডেটার জন্য ডেভেলপার-পরিচালিত কোনো ক্লাউড ডেটাবেস ব্যবহার করা হয় না।</li>
+            </ul>
+            
             <div class="callout info">
-                <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
-                <div><strong>Delete Anytime</strong>You can remove all local data via Android settings (clear app data) or by uninstalling ICT Tool.</div>
+                <i class="fa-solid fa-trash-can"></i>
+                <div class="lang-en"><strong>Delete Anytime</strong>You can remove all local data via Android settings (clear app data) or by uninstalling ICT Tool.</div>
+                <div class="lang-bn"><strong>যেকোনো সময় মুছে ফেলুন</strong>আপনি অ্যান্ড্রয়েড সেটিংস থেকে (ক্লিয়ার অ্যাপ ডেটা) বা অ্যাপটি আনইনস্টল করার মাধ্যমে সমস্ত লোকাল ডেটা মুছে ফেলতে পারেন।</div>
             </div>
         </div>
     </div>
 
     <div class="section-card" id="s4">
         <div class="section-header">
-            <div class="section-num">04</div>
+            <div class="section-num lang-en">04</div>
+            <div class="section-num lang-bn">০৪</div>
             <div>
-                <div class="section-title">Permissions Explained</div>
-                <div class="section-subtitle">Why each permission is requested</div>
+                <div class="section-title lang-en">Permissions Explained</div>
+                <div class="section-title lang-bn">পারমিশনের ব্যাখ্যা</div>
+                <div class="section-subtitle lang-en">Why each permission is requested</div>
+                <div class="section-subtitle lang-bn">কেন পারমিশনগুলো চাওয়া হয়</div>
             </div>
         </div>
         <div class="section-body">
-            <p>ICT Tool requests only these permissions:</p>
-            <ul class="policy-list">
+            <p class="lang-en">ICT Tool requests only these permissions:</p>
+            <p class="lang-bn">ICT Tool শুধুমাত্র এই পারমিশনগুলো চায়:</p>
+            
+            <ul class="policy-list lang-en">
                 <li><strong>Internet Access</strong> — Used to access online textbook/PDF resources when you choose those features.</li>
                 <li><strong>Network State Access</strong> — Used to check connectivity before online requests.</li>
             </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>ইন্টারনেট অ্যাক্সেস</strong> — অনলাইন বই/পিডিএফ রিসোর্স অ্যাক্সেস করতে।</li>
+                <li><strong>নেটওয়ার্ক স্টেট অ্যাক্সেস</strong> — অনলাইনে কোনো রিকোয়েস্ট পাঠানোর আগে কানেক্টিভিটি চেক করতে।</li>
+            </ul>
+            
             <div class="callout warning">
-                <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                <div><strong>No Sensitive Permissions</strong>No camera, microphone, location, contacts, SMS, or storage-management sensitive permissions are requested.</div>
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <div class="lang-en"><strong>No Sensitive Permissions</strong>No camera, microphone, location, contacts, SMS, or storage-management sensitive permissions are requested.</div>
+                <div class="lang-bn"><strong>কোনো সংবেদনশীল অনুমতি নেই</strong>ক্যামেরা, মাইক্রোফোন, লোকেশন বা স্টোরেজ-ম্যানেজমেন্টের মতো কোনো সংবেদনশীল পারমিশন চাওয়া হয় না।</div>
             </div>
         </div>
     </div>
 
     <div class="section-card" id="s5">
         <div class="section-header">
-            <div class="section-num">05</div>
+            <div class="section-num lang-en">05</div>
+            <div class="section-num lang-bn">০৫</div>
             <div>
-                <div class="section-title">Third-Party Services</div>
-                <div class="section-subtitle">External services used by app features</div>
+                <div class="section-title lang-en">Third-Party Services</div>
+                <div class="section-title lang-bn">তৃতীয় পক্ষের পরিষেবা</div>
+                <div class="section-subtitle lang-en">External services used by app features</div>
+                <div class="section-subtitle lang-bn">অ্যাপের ফিচারে ব্যবহৃত বাহ্যিক পরিষেবা</div>
             </div>
         </div>
         <div class="section-body">
-            <p>The app may access external content hosts to load textbook PDF resources (like Google Drive) and GitHub Pages to securely check for the latest app version updates.</p>
-            <h3>No Ads/Analytics Libraries in Current Build</h3>
-            <div class="pill-grid">
+            <p class="lang-en">The app may access external content hosts to load textbook PDF resources (like Google Drive) and GitHub Pages to securely check for the latest app version updates.</p>
+            <p class="lang-bn">পাঠ্যপুস্তকের পিডিএফ লোড করতে (যেমন গুগল ড্রাইভ) এবং অ্যাপের নতুন ভার্সন চেক করতে (গিটহাব পেজ) অ্যাপটি এক্সটার্নাল হোস্ট ব্যবহার করতে পারে।</p>
+            
+            <h3 class="lang-en">No Ads/Analytics Libraries in Current Build</h3>
+            <h3 class="lang-bn">বর্তমান বিল্ডে কোনো অ্যাডস/অ্যানালিটিক্স নেই</h3>
+            
+            <div class="pill-grid lang-en">
                 <span class="pill blocked">AdMob</span>
                 <span class="pill blocked">Facebook Ads SDK</span>
                 <span class="pill blocked">Firebase Analytics</span>
                 <span class="pill blocked">Third-Party Tracking SDKs</span>
+            </div>
+            <div class="pill-grid lang-bn">
+                <span class="pill blocked">অ্যাডমব (AdMob)</span>
+                <span class="pill blocked">ফেসবুক অ্যাডস SDK</span>
+                <span class="pill blocked">ফায়ারবেস অ্যানালিটিক্স</span>
+                <span class="pill blocked">ট্র্যাকিং SDK</span>
             </div>
         </div>
     </div>
 
     <div class="section-card" id="s6">
         <div class="section-header">
-            <div class="section-num">06</div>
+            <div class="section-num lang-en">06</div>
+            <div class="section-num lang-bn">০৬</div>
             <div>
-                <div class="section-title">Children's Privacy</div>
-                <div class="section-subtitle">Educational app privacy approach</div>
+                <div class="section-title lang-en">Children's Privacy</div>
+                <div class="section-title lang-bn">শিশুদের গোপনীয়তা</div>
+                <div class="section-subtitle lang-en">Educational app privacy approach</div>
+                <div class="section-subtitle lang-bn">শিক্ষামূলক অ্যাপের গোপনীয়তা নীতি</div>
             </div>
         </div>
         <div class="section-body">
-            <p>ICT Tool is an educational app. It is designed to minimize personal data handling and does not require account creation.</p>
-            <p>Parents/guardians can remove local app data at any time by clearing app storage or uninstalling the app.</p>
+            <p class="lang-en">ICT Tool is an educational app. It is designed to minimize personal data handling and does not require account creation.</p>
+            <p class="lang-bn">ICT Tool একটি শিক্ষামূলক অ্যাপ। এটি ব্যক্তিগত ডেটা ব্যবহার কমানোর জন্য ডিজাইন করা হয়েছে এবং এখানে কোনো অ্যাকাউন্ট খোলার প্রয়োজন নেই।</p>
+            <p class="lang-en">Parents/guardians can remove local app data at any time by clearing app storage or uninstalling the app.</p>
+            <p class="lang-bn">অভিভাবকরা যেকোনো সময় অ্যাপ স্টোরেজ ক্লিয়ার বা আনইনস্টল করে লোকাল ডেটা মুছে ফেলতে পারেন।</p>
         </div>
     </div>
 
     <div class="section-card" id="s7">
         <div class="section-header">
-            <div class="section-num">07</div>
+            <div class="section-num lang-en">07</div>
+            <div class="section-num lang-bn">০৭</div>
             <div>
-                <div class="section-title">Data Security</div>
-                <div class="section-subtitle">How local data is protected</div>
+                <div class="section-title lang-en">Data Security</div>
+                <div class="section-title lang-bn">ডেটা নিরাপত্তা</div>
+                <div class="section-subtitle lang-en">How local data is protected</div>
+                <div class="section-subtitle lang-bn">লোকাল ডেটা কীভাবে সুরক্ষিত থাকে</div>
             </div>
         </div>
         <div class="section-body">
-            <ul class="policy-list">
+            <ul class="policy-list lang-en">
                 <li>Data is protected by Android app sandboxing and private app storage.</li>
                 <li>HTTPS is used for network content access.</li>
                 <li>Local preference encryption is used where supported by the device environment.</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li>অ্যান্ড্রয়েড অ্যাপ স্যান্ডবক্সিং এবং প্রাইভেট অ্যাপ স্টোরেজ দ্বারা ডেটা সুরক্ষিত।</li>
+                <li>নেটওয়ার্ক কন্টেন্ট অ্যাক্সেসের জন্য HTTPS ব্যবহার করা হয়।</li>
+                <li>ডিভাইস সাপোর্ট করলে লোকাল প্রেফারেন্সের জন্য এনক্রিপশন ব্যবহার করা হয়।</li>
             </ul>
         </div>
     </div>
 
     <div class="section-card" id="s8">
         <div class="section-header">
-            <div class="section-num">08</div>
+            <div class="section-num lang-en">08</div>
+            <div class="section-num lang-bn">০৮</div>
             <div>
-                <div class="section-title">Internet Usage</div>
-                <div class="section-subtitle">When the app uses network access</div>
+                <div class="section-title lang-en">Internet Usage</div>
+                <div class="section-title lang-bn">ইন্টারনেট ব্যবহার</div>
+                <div class="section-subtitle lang-en">When the app uses network access</div>
+                <div class="section-subtitle lang-bn">অ্যাপ কখন ইন্টারনেট ব্যবহার করে</div>
             </div>
         </div>
         <div class="section-body">
-            <p>ICT Tool is not fully offline. Internet is used for features that fetch textbook/PDF resources. Core calculator and note features can still be used without internet.</p>
-            <ul class="policy-list">
+            <p class="lang-en">ICT Tool is not fully offline. Internet is used for features that fetch textbook/PDF resources. Core calculator and note features can still be used without internet.</p>
+            <p class="lang-bn">ICT Tool সম্পূর্ণ অফলাইন নয়। বই/পিডিএফ আনার জন্য ইন্টারনেট ব্যবহৃত হয়। তবে ক্যালকুলেটর এবং নোট ফিচারগুলো ইন্টারনেট ছাড়াই ব্যবহার করা যায়।</p>
+            
+            <ul class="policy-list lang-en">
                 <li><strong>App Update Checks</strong> — The app briefly checks the internet during startup to notify you if a new version is available.</li>
                 <li><strong>Optional content fetch</strong> — Triggered when you choose online book/PDF actions.</li>
                 <li><strong>No ad/analytics traffic</strong> — No ad or analytics SDK network calls in current build config.</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>অ্যাপ আপডেট চেক</strong> — নতুন ভার্সন আছে কিনা তা জানাতে অ্যাপটি চালুর সময় অল্প সময়ের জন্য ইন্টারনেট চেক করে।</li>
+                <li><strong>ঐচ্ছিক কন্টেন্ট ফেচ</strong> — যখন আপনি অনলাইন বই/পিডিএফ দেখার অপশন বেছে নেন।</li>
+                <li><strong>কোনো অ্যাড/অ্যানালিটিক্স ট্রাফিক নেই</strong> — বর্তমান কনফিগারেশনে কোনো অ্যাড বা অ্যানালিটিক্স নেটওয়ার্ক কল নেই।</li>
             </ul>
         </div>
     </div>
 
     <div class="section-card" id="s9">
         <div class="section-header">
-            <div class="section-num">09</div>
+            <div class="section-num lang-en">09</div>
+            <div class="section-num lang-bn">০৯</div>
             <div>
-                <div class="section-title">Data Deletion</div>
-                <div class="section-subtitle">You are always in control</div>
+                <div class="section-title lang-en">Data Deletion</div>
+                <div class="section-title lang-bn">ডেটা মুছে ফেলা</div>
+                <div class="section-subtitle lang-en">You are always in control</div>
+                <div class="section-subtitle lang-bn">আপনার নিয়ন্ত্রণ সর্বদা বজায় থাকে</div>
             </div>
         </div>
         <div class="section-body">
-            <ul class="policy-list">
+            <ul class="policy-list lang-en">
                 <li><strong>Clear App Data</strong> — Android Settings -> Apps -> ICT Tool -> Storage -> Clear Data.</li>
                 <li><strong>Uninstall App</strong> — Removes app-local data from the device.</li>
                 <li><strong>In-App Delete Actions</strong> — Available for histories, notes, and saved snippets in app flows.</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>ক্লিয়ার অ্যাপ ডেটা</strong> — অ্যান্ড্রয়েড সেটিংস -> অ্যাপস -> ICT Tool -> স্টোরেজ -> ক্লিয়ার ডেটা।</li>
+                <li><strong>আনইনস্টল অ্যাপ</strong> — ডিভাইস থেকে অ্যাপ-লোকাল ডেটা মুছে ফেলে।</li>
+                <li><strong>অ্যাপের ভেতর ডিলিট অপশন</strong> — হিস্ট্রি, নোটস এবং সেভ করা কোড মুছে ফেলার সুবিধা অ্যাপেই রয়েছে।</li>
             </ul>
         </div>
     </div>
 
     <div class="section-card" id="s10">
         <div class="section-header">
-            <div class="section-num">10</div>
+            <div class="section-num lang-en">10</div>
+            <div class="section-num lang-bn">১০</div>
             <div>
-                <div class="section-title">Changes to This Policy</div>
-                <div class="section-subtitle">How updates are communicated</div>
+                <div class="section-title lang-en">Changes to This Policy</div>
+                <div class="section-title lang-bn">নীতির পরিবর্তন</div>
+                <div class="section-subtitle lang-en">How updates are communicated</div>
+                <div class="section-subtitle lang-bn">আপডেট কীভাবে জানানো হয়</div>
             </div>
         </div>
         <div class="section-body">
-            <p>We may update this Privacy Policy to reflect product, legal, or compliance changes. Any update becomes effective when posted with a revised date.</p>
+            <p class="lang-en">We may update this Privacy Policy to reflect product, legal, or compliance changes. Any update becomes effective when posted with a revised date.</p>
+            <p class="lang-bn">আমরা পণ্য বা আইনি প্রয়োজনে এই গোপনীয়তা নীতি আপডেট করতে পারি। সংশোধিত তারিখ সহ পোস্ট করা হলে আপডেটটি কার্যকর হবে।</p>
         </div>
     </div>
 
     <div class="contact-card" id="s11">
         <div class="section-header">
-            <div class="section-num">11</div>
+            <div class="section-num lang-en">11</div>
+            <div class="section-num lang-bn">১১</div>
             <div>
-                <div class="section-title">Contact Us</div>
-                <div class="section-subtitle">Questions, concerns, or feedback about this policy?</div>
+                <div class="section-title lang-en">Contact Us</div>
+                <div class="section-title lang-bn">যোগাযোগ করুন</div>
+                <div class="section-subtitle lang-en">Questions, concerns, or feedback about this policy?</div>
+                <div class="section-subtitle lang-bn">এই নীতি সম্পর্কে কোনো প্রশ্ন বা মতামত আছে?</div>
             </div>
         </div>
-        <p style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">Reach out to the developer or JS Organization through any of the following channels:</p>
+        
+        <p class="lang-en" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">Reach out to the developer or JS Organization through any of the following channels:</p>
+        <p class="lang-bn" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">নিচের যেকোনো মাধ্যমে ডেভেলপার বা JS Organization-এর সাথে যোগাযোগ করতে পারেন:</p>
+        
         <div class="contact-grid">
             <a class="contact-item" href="mailto:jsorganization.official@gmail.com">
                 <div class="contact-label">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+                    <i class="fa-solid fa-envelope"></i>
                     Email
                 </div>
                 <div class="contact-value cv-green">jsorganization.official@gmail.com</div>
@@ -515,7 +674,7 @@
 
             <a class="contact-item" href="https://t.me/swrov" target="_blank" rel="noopener noreferrer">
                 <div class="contact-label">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    <i class="fa-brands fa-telegram"></i>
                     Developer · Telegram
                 </div>
                 <div class="contact-value cv-blue">@swrov</div>
@@ -523,7 +682,7 @@
 
             <a class="contact-item" href="https://t.me/JSOrganization" target="_blank" rel="noopener noreferrer">
                 <div class="contact-label">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    <i class="fa-solid fa-paper-plane"></i>
                     Telegram Channel
                 </div>
                 <div class="contact-value cv-blue">@JSOrganization</div>
@@ -531,7 +690,7 @@
 
             <a class="contact-item" href="https://github.com/JSOrganizations" target="_blank" rel="noopener noreferrer">
                 <div class="contact-label">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    <i class="fa-brands fa-github"></i>
                     GitHub
                 </div>
                 <div class="contact-value cv-green">JSOrganizations</div>
@@ -539,7 +698,7 @@
 
             <a class="contact-item" href="https://youtube.com/channel/UCpMq9ITrRfIGK2dxVv5R_kw" target="_blank" rel="noopener noreferrer">
                 <div class="contact-label">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 1.95C5.12 20 12 20 12 20s6.88 0 8.6-.47a2.78 2.78 0 0 0 1.94-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+                    <i class="fa-brands fa-youtube"></i>
                     YouTube
                 </div>
                 <div class="contact-value" style="color:rgba(255,255,255,.75);">JS Organization</div>
@@ -547,7 +706,7 @@
 
             <div class="contact-item" style="cursor:default;">
                 <div class="contact-label">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    <i class="fa-solid fa-box"></i>
                     App Package
                 </div>
                 <div class="contact-value" style="color:rgba(255,255,255,.45); font-size:12px; font-family:monospace;">com.jsorg.icttool</div>
@@ -557,9 +716,45 @@
 </div>
 
 <div class="footer">
-    <p>This Privacy Policy was last updated in <strong>2026</strong>.</p>
-    <p style="margin-top:6px;">© 2026 <strong>JS Organization</strong>. All rights reserved.</p>
+    <p class="lang-en">This Privacy Policy was last updated in <strong>2026</strong>.</p>
+    <p class="lang-bn">এই গোপনীয়তা নীতি সর্বশেষ <strong>২০২৬</strong> সালে আপডেট করা হয়েছে।</p>
+    <p style="margin-top:6px;">&copy; 2026 <strong>JS Organization</strong>. All rights reserved.</p>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('language');
+        const body = document.body;
+        
+        if (lang === 'bangla' || lang === 'bn') {
+            body.classList.remove('lang-en');
+            body.classList.add('lang-bn');
+        } else {
+            body.classList.remove('lang-bn');
+            body.classList.add('lang-en');
+        }
+    });
+
+    function toggleLanguage() {
+        const body = document.body;
+        if (body.classList.contains('lang-en')) {
+            body.classList.remove('lang-en');
+            body.classList.add('lang-bn');
+            updateURL('bangla');
+        } else {
+            body.classList.remove('lang-bn');
+            body.classList.add('lang-en');
+            updateURL('english');
+        }
+    }
+
+    function updateURL(lang) {
+        const url = new URL(window.location);
+        url.searchParams.set('language', lang);
+        window.history.pushState({}, '', url);
+    }
+</script>
 
 </body>
 </html>
