@@ -5,16 +5,16 @@
   "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.icttool",
   "whats_new": {
     "bn": [
-      "নতুন দশমিক (Fractional) বেজ ক্যালকুলেটর যুক্ত করা হয়েছে।",
-      "অ্যালগরিদম এবং এক্সপ্ল্যানেশনে ভিজ্যুয়াল অ্যালাইনমেন্ট দেওয়া হয়েছে।",
-      "হিস্ট্রি ফিচারে আপডেট আনা হয়েছে।",
-      "ছোটখাটো কিছু বাগ (Bug) ফিক্স করা হয়েছে।"
+      "স্মার্ট নোটিফিকেশন: পড়াশোনার রিমাইন্ডার এবং মাইলস্টোন অ্যালার্ট যুক্ত করা হয়েছে। আপনি সেটিংস থেকে এগুলো নিয়ন্ত্রণ করতে পারবেন।",
+      "ইন-অ্যাপ আপডেট চেকার: নতুন ভার্সন আসলে এখন অ্যাপের ভেতর থেকেই সরাসরি জানতে পারবেন।",
+      "লিগ্যাল পেজ আপডেট: প্রাইভেসি পলিসি এবং ব্যবহারের শর্তাবলি এখন বাংলা ও ইংরেজি উভয় ভাষায় উপলব্ধ।",
+      "পারফরম্যান্স আপডেট: মূল অফলাইন ফিচারগুলো অপ্টিমাইজ করা হয়েছে এবং বেস ক্যালকুলেটরের ছোটখাটো বাগ ফিক্স করা হয়েছে।"
     ],
     "en": [
-      "Added Fractional math support in Base Calculator.",
-      "Improved step-by-step explanations.",
-      "Smart history updated to support fractions.",
-      "Minor bug fixes and UI improvements."
+      "Smart Notifications: Added study reminders and milestone alerts. You can control these from Settings.",
+      "In-App Update Checker: Get notified instantly when a new version is available without checking manually.",
+      "Bilingual Legal Pages: Privacy Policy and Terms of Use are now available in both English and Bangla.",
+      "Performance Boost: Optimized core offline features and fixed minor UI bugs in the Base Calculator."
     ]
   }
 }
