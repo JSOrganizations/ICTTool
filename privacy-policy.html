@@ -270,7 +270,8 @@
         .section-card:nth-child(8)  { animation-delay:.32s; }
         .section-card:nth-child(9)  { animation-delay:.36s; }
         .section-card:nth-child(10) { animation-delay:.40s; }
-        .contact-card { animation-delay:.44s; }
+        .section-card:nth-child(11) { animation-delay:.44s; }
+        .contact-card { animation-delay:.48s; }
         
         @media (max-width:480px) {
             .toc-link { padding:11px 12px; }
@@ -381,6 +382,7 @@
                 <li><strong>Reading Progress</strong> — Local state related to textbook viewing.</li>
                 <li><strong>Last Used Time</strong> — Used locally to calculate idle time for 'Milestone Notifications'.</li>
                 <li><strong>Last Notification Time</strong> — Saved locally to ensure you are not bothered with repeated notifications on the same day.</li>
+                <li><strong>Version & Package Data</strong> — The app reads its current version code and package name locally to compare with our server for 'Update Available' alerts. This is not stored as personal identity data.</li>
             </ul>
             <ul class="policy-list lang-bn">
                 <li><strong>অ্যাপের পছন্দসমূহ</strong> — থিম, ভাষা, সময় বিন্যাস এবং বিভিন্ন সেটিংস।</li>
@@ -390,12 +392,13 @@
                 <li><strong>পড়ার অগ্রগতি</strong> — পাঠ্যপুস্তক দেখার লোকাল অবস্থা।</li>
                 <li><strong>সর্বশেষ ব্যবহারের সময়</strong> — আপনি কতদিন ধরে অ্যাপটি ব্যবহার করছেন না তা হিসেব করে 'মাইলস্টোন নোটিফিকেশন' পাঠানোর জন্য এটি ব্যবহৃত হয়।</li>
                 <li><strong>সর্বশেষ নোটিফিকেশনের সময়</strong> — একই দিনে বারবার নোটিফিকেশন পাঠিয়ে আপনাকে বিরক্ত না করার জন্য এটি ডিভাইসে সেভ থাকে।</li>
+                <li><strong>ভার্সন ও প্যাকেজ ডেটা</strong> — আপডেট চেক করার জন্য আপনার ডিভাইসে ইনস্টল করা অ্যাপের ভার্সন কোড এবং প্যাকেজ নাম রিড করা হয়। এটি ব্যক্তিগত তথ্য হিসেবে সংরক্ষিত হয় না।</li>
             </ul>
 
             <div class="callout info">
                 <i class="fa-solid fa-circle-info"></i>
-                <div class="lang-en"><strong>Offline & Secure</strong>These notification timestamps are strictly non-personal, completely offline, and are never transmitted outside your device. You can delete this data anytime by clearing app data.</div>
-                <div class="lang-bn"><strong>অফলাইন এবং সুরক্ষিত</strong>এই নোটিফিকেশন ডেটাগুলো সম্পূর্ণ অফলাইন এবং আপনার ডিভাইসের বাইরে কোথাও পাঠানো হয় না। অ্যাপ ডেটা ক্লিয়ার করে আপনি যেকোনো সময় এটি মুছে ফেলতে পারেন।</div>
+                <div class="lang-en"><strong>Offline & Secure</strong>These notification and version data points are strictly non-personal, completely offline, and are never transmitted outside your device. You can delete this data anytime by clearing app data.</div>
+                <div class="lang-bn"><strong>অফলাইন এবং সুরক্ষিত</strong>এই নোটিফিকেশন এবং ভার্সন ডেটাগুলো সম্পূর্ণ অফলাইন এবং আপনার ডিভাইসের বাইরে কোথাও পাঠানো হয় না। অ্যাপ ডেটা ক্লিয়ার করে আপনি যেকোনো সময় এটি মুছে ফেলতে পারেন।</div>
             </div>
         </div>
     </div>
@@ -526,10 +529,10 @@
             <p class="lang-en">The app accesses external content hosts like Google Drive (for PDF resources) and GitHub Pages securely for app version checks.</p>
             <p class="lang-bn">পাঠ্যপুস্তকের পিডিএফ লোড করতে (যেমন গুগল ড্রাইভ) এবং অ্যাপের ভার্সন চেক করতে (গিটহাব পেজ) অ্যাপটি এক্সটার্নাল হোস্ট ব্যবহার করে।</p>
             
-            <h3 class="lang-en">Remote Content Syncing</h3>
-            <h3 class="lang-bn">রিমোট কন্টেন্ট সিঙ্কিং</h3>
-            <p class="lang-en">During startup, the app fetches a lightweight `notification.json` file from GitHub Pages. This is strictly a one-way download used to update notification messages (e.g., "Time to study!"). <strong>No user data is ever uploaded or sent to GitHub.</strong></p>
-            <p class="lang-bn">অ্যাপটি চালুর সময় GitHub Pages থেকে একটি ছোট `notification.json` ফাইল ফেচ করে। এটি শুধুমাত্র নোটিফিকেশনের লেখাগুলো (যেমন: "ঘুমাওনি এখনো?") আপডেট করার জন্য ব্যবহৃত হয়। <strong>এর মাধ্যমে কোনো ইউজার ডেটা গিটহাবে পাঠানো বা আপলোড করা হয় না।</strong></p>
+            <h3 class="lang-en">Remote Sync & Updates</h3>
+            <h3 class="lang-bn">রিমোট সিঙ্ক এবং আপডেট</h3>
+            <p class="lang-en">During startup or usage, the app securely checks GitHub Pages for lightweight files (<code>update.json</code> and <code>notification.json</code>). This enables us to notify you about new features, bug fixes, security patches, and study reminders. <strong>No user data or sensitive files are ever accessed, uploaded, or sent to GitHub.</strong></p>
+            <p class="lang-bn">অ্যাপটি চালুর সময় এবং ব্যবহারের মাঝে মাঝে GitHub Pages থেকে <code>update.json</code> এবং <code>notification.json</code> ফাইল চেক করে। এর মাধ্যমে আমরা অ্যাপের নতুন ফিচার, বাগ ফিক্স এবং নোটিফিকেশন সম্পর্কে তথ্য প্রদান করি। <strong>গিটহাব থেকে এই ডাটা ফেচ করার সময় আপনার কোনো ব্যক্তিগত বা সেনসিটিভ ডাটা অ্যাক্সেস বা আপলোড করা হয় না।</strong></p>
 
             <h3 class="lang-en">No Ads/Analytics Libraries in Current Build</h3>
             <h3 class="lang-bn">বর্তমান বিল্ডে কোনো অ্যাডস/অ্যানালিটিক্স নেই</h3>
@@ -609,12 +612,14 @@
             <p class="lang-bn">ICT Tool সম্পূর্ণ অফলাইন নয়। বই বা পিডিএফ আনা এবং নোটিফিকেশনের লেখাগুলো নতুন রাখার জন্য ইন্টারনেট ব্যবহৃত হয়। কোর ফিচারগুলো অফলাইনেই চলে।</p>
             
             <ul class="policy-list lang-en">
-                <li><strong>Notification Content Sync</strong> — The app periodically fetches new notification messages and version checks via the internet, consuming very minimal data.</li>
+                <li><strong>Update Verification</strong> — The app uses the internet to verify new versions and display "What's New" release notes in your preferred language. It only downloads a tiny JSON file, saving your data.</li>
+                <li><strong>Notification Content Sync</strong> — The app periodically fetches new notification messages via the internet, consuming very minimal data.</li>
                 <li><strong>Optional content fetch</strong> — Triggered when you choose online book/PDF actions.</li>
                 <li><strong>No ad/analytics traffic</strong> — No ad or analytics SDK network calls in current build config.</li>
             </ul>
             <ul class="policy-list lang-bn">
-                <li><strong>নোটিফিকেশন কন্টেন্ট আপডেট</strong> — অ্যাপটি মাঝে মাঝে ইন্টারনেটের মাধ্যমে নোটিফিকেশনের নতুন মেসেজ এবং ভার্সন চেক করে। এটি অত্যন্ত সামান্য ডেটা খরচ করে।</li>
+                <li><strong>আপডেট ভেরিফিকেশন</strong> — নতুন ভার্সন চেক করার জন্য এবং 'নতুন কি আছে' (What's New) কন্টেন্টগুলো আপনার পছন্দের ভাষায় দেখানোর জন্য অ্যাপটি ইন্টারনেট ব্যবহার করে। এটি শুধুমাত্র একটি ছোট JSON ফাইল ডাউনলোড করে, যা আপনার ডেটা সাশ্রয় করে।</li>
+                <li><strong>নোটিফিকেশন কন্টেন্ট আপডেট</strong> — অ্যাপটি মাঝে মাঝে ইন্টারনেটের মাধ্যমে নোটিফিকেশনের নতুন মেসেজ চেক করে। এটি অত্যন্ত সামান্য ডেটা খরচ করে।</li>
                 <li><strong>ঐচ্ছিক কন্টেন্ট ফেচ</strong> — যখন আপনি অনলাইন বই/পিডিএফ দেখার অপশন বেছে নেন।</li>
                 <li><strong>কোনো অ্যাড/অ্যানালিটিক্স ট্রাফিক নেই</strong> — বর্তমান কনফিগারেশনে কোনো অ্যাড বা অ্যানালিটিক্স নেটওয়ার্ক কল নেই।</li>
             </ul>
@@ -677,8 +682,8 @@
         <div class="section-body">
             <div class="callout safe">
                 <i class="fa-solid fa-sliders"></i>
-                <div class="lang-en"><strong>Notification Control</strong>You can independently toggle 'Milestone Notifications' or 'Night Notifications' from the in-app Settings screen. You also have full control to disable all notifications entirely via your Android System Settings.</div>
-                <div class="lang-bn"><strong>নোটিফিকেশন কন্ট্রোল</strong>আপনি সেটিংস স্ক্রিন থেকে যেকোনো সময় 'মাইলস্টোন নোটিফিকেশন' বা 'নাইট নোটিফিকেশন' আলাদাভাবে বন্ধ বা চালু করতে পারেন। সিস্টেম সেটিংস থেকে সম্পূর্ণ নোটিফিকেশন বন্ধ করার সুবিধাও আপনার নিয়ন্ত্রণে রয়েছে।</div>
+                <div class="lang-en"><strong>Notification & Update Controls</strong>You can independently toggle 'Milestone Notifications' or 'Night Notifications' from the in-app Settings screen. For non-critical app updates, you can use the "Maybe Later" button to snooze the update prompt for 24 hours. You also have full control to disable all notifications entirely via your Android System Settings.</div>
+                <div class="lang-bn"><strong>নোটিফিকেশন এবং আপডেট কন্ট্রোল</strong>আপনি সেটিংস স্ক্রিন থেকে যেকোনো সময় 'মাইলস্টোন নোটিফিকেশন' বা 'নাইট নোটিফিকেশন' আলাদাভাবে বন্ধ বা চালু করতে পারেন। এছাড়া কোনো আপডেট বাধ্যতামূলক না হলে, আপনি 'Maybe Later' বাটনের মাধ্যমে আপডেটটি পরবর্তী ২৪ ঘণ্টার জন্য স্থগিত (Snooze) রাখতে পারেন। সিস্টেম সেটিংস থেকে সম্পূর্ণ নোটিফিকেশন বন্ধ করার সুবিধাও আপনার নিয়ন্ত্রণে রয়েছে।</div>
             </div>
         </div>
     </div>
