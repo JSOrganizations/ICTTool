@@ -1,16 +1,16 @@
 {
-  "latest_version_code": 8,
-  "latest_version_name": "1.7",
+  "latest_version_code": 9,
+  "latest_version_name": "1.8",
   "is_force_update": false,
   "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.icttool",
   "whats_new": {
     "bn": [
-      "নতুন টিউটোরিয়াল ভিডিও সেকশন যুক্ত করা হয়েছে।",
-      "ভিডিওর মাধ্যমে অ্যাপের প্রতিটি ফিচারের ব্যবহার শেখার সুবিধা।"
+      "সার্কিট জেনারেটরে হোল বার (Whole bar) প্রদর্শনের সমস্যাটি সমাধান করা হয়েছে।",
+      "হোল বার কীভাবে ইনপুট দিতে হয় তা সহজে বোঝার জন্য নতুন হিন্ট (Hint) সিস্টেম যুক্ত করা হয়েছে।"
     ],
     "en": [
-      "Added a brand new Tutorial Videos section.",
-      "Learn how to use all app features through step-by-step video guides."
+      "Fixed the issue where the Whole Bar was not visible in the Circuit Generator.",
+      "Added helpful hints to make it easier to understand how to input the Whole Bar."
     ]
   }
 }
